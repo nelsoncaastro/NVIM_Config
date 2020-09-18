@@ -36,9 +36,8 @@ set formatoptions-=cro
 set clipboard=unnamedplus
 au! BufWritePost $MYVIMRC source %
 
-if exists('g:vscode')
-    source $HOME/.config/nivm/vscode/settings.vim
-else
+
+if !exists('g:vscode')
     " Mappings
     " Ctrl + hjkl to resize windows
     nnoremap <C-j>    :resize -2<CR>
@@ -73,4 +72,6 @@ else
     source $HOME/.config/nvim/vim-plug/plugins.vim
     source $HOME/.config/nvim/vim-plug/rnvimr.vim
     source $HOME/.config/nvim/vim-plug/airline.vim
+else
+    source $HOME/.config/nvim/vscode/settings.vim
 endif
