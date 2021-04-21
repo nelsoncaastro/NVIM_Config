@@ -70,7 +70,6 @@ if !exists('g:vscode')
 
     " Plugins conf files
     source $HOME/.config/nvim/vim-plug/plugins.vim
-    source $HOME/.config/nvim/vim-plug/rnvimr.vim
     source $HOME/.config/nvim/vim-plug/airline.vim
 else
     source $HOME/.config/nvim/vscode/settings.vim
